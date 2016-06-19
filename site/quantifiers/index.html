@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Quatifiers - Regular Expression</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Regular Expression</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Introduction</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Quatifiers</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#quantifiers">Quantifiers</a></li>
+        
+            <li><a href="#0-or-more">* : 0 or more</a></li>
+        
+            <li><a href="#1-or-more">+ : 1 or more</a></li>
+        
+            <li><a href="#0-or-1">? : 0 or 1</a></li>
+        
+            <li><a href="#3-exactly-3">{3}: Exactly 3</a></li>
+        
+            <li><a href="#3-exactly-3-or-more">{3, }: Exactly 3 or more</a></li>
+        
+            <li><a href="#3-5-3-4-or-5">{3, 5}: 3, 4 or 5</a></li>
+        
+            <li><a href="#greedy-and-lazy">Greedy and Lazy</a></li>
+        
+    
+        <li class="main "><a href="#references">References</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="quantifiers">Quantifiers</h1>
+<table>
+<tr>
+<td>Quantifier</td>
+<td>Meaning</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>O or more</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>1 or more</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>O or 1</td>
+</tr>
+<tr>
+<td><code>{3}</code></td>
+<td>Exactly 3</td>
+</tr>
+<tr>
+<tr>
+<td><code>{3,}</code></td>
+<td>3 or more</td>
+</tr>
+<tr>
+<td><code>{3,5}</code></td>
+<td>3, 4 or 5</td>
+</tr>
+<tr>
+</table>
+
+<h2 id="0-or-more">* : 0 or more</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c*</td>
+<td>
+<code>ab</code><br/>
+<code>abc</code><br/>
+<code>abcc</code><br/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="1-or-more">+ : 1 or more</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c+</td>
+<td>
+ab<br/>
+<code>abc</code><br/>
+<code>abcc</code><br/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="0-or-1">? : 0 or 1</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c?</td>
+<td>
+<code>ab</code><br/>
+<code>abc</code><br/>
+abcc<br/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="3-exactly-3">{3}: Exactly 3</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c{3}</td>
+<td>
+ab<br/>
+abc<br/>
+abcc<br/>
+abcc<br/>
+<code>abccc</code><br/>
+abcccc
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="3-exactly-3-or-more">{3, }: Exactly 3 or more</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c{3,}</td>
+<td>
+abcc<br/>
+abcc<br/>
+<code>abccc</code><br/>
+<code>abcccc</code><br/>
+<code>abcccccc</code><br/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="3-5-3-4-or-5">{3, 5}: 3, 4 or 5</h2>
+<table>
+<thead>
+<tr>
+<td>Regular Expression</td>
+<td>Test Strings</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(ab)c{3, 5}</td>
+<td>
+abc<br/>
+abcc<br/>
+<code>abccc</code><br/>
+<code>abcccc</code><br/>
+<code>abccccc</code><br/>
+abcccccc<br/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="greedy-and-lazy">Greedy and Lazy</h2>
+<table>
+<thead>
+<tr>
+<td>String</td>
+<td>Greedy</td>
+<td>Lazy</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aabaaba</td>
+<td>
+Regex: <b>^.b</b><br/>
+Match: <code>aabaab</code>a
+</td>
+<td>
+Regex: <b>^.*b?</b><br/>
+Match: <code>aab</code>aaba
+</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="references">References</h1>
+<ul>
+<li><a href="http://web.mit.edu/hackl/www/lab/turkshop/slides/regex-cheatsheet.pdf">Regular Expressions cheat sheet</a></li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

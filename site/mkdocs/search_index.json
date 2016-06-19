@@ -1,0 +1,74 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Introduction\n\n\nWelcome to Regular Expression Tutorial \n\n\nThis is one of our computer science tutorials. \n\n\nDon't hesitate to email me \nbrother.rain.1024@gmail.com\n if you think it can better.\n\n\nContent\n\n\n\n\nQuantifiers \n\n\n\n\nResources\n\n\n\n\nRegular Expression\n\n\nRegular Expression Cheat Sheet\n\n\n\n\nTry Online\n\n\n\n\nTry Regex", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#introduction", 
+            "text": "Welcome to Regular Expression Tutorial   This is one of our computer science tutorials.   Don't hesitate to email me  brother.rain.1024@gmail.com  if you think it can better.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/#content", 
+            "text": "Quantifiers", 
+            "title": "Content"
+        }, 
+        {
+            "location": "/#resources", 
+            "text": "Regular Expression  Regular Expression Cheat Sheet   Try Online   Try Regex", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/quantifiers/", 
+            "text": "Quantifiers\n\n\n\n\n\n\nQuantifier\n\n\nMeaning\n\n\n\n\n\n\n*\n\n\nO or more\n\n\n\n\n\n\n+\n\n\n1 or more\n\n\n\n\n\n\n?\n\n\nO or 1\n\n\n\n\n\n\n{3}\n\n\nExactly 3\n\n\n\n\n\n\n\n\n{3,}\n\n\n3 or more\n\n\n\n\n\n\n{3,5}\n\n\n3, 4 or 5\n\n\n\n\n\n\n\n\n\n* : 0 or more\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c*\n\n\n\n\nab\n\n\nabc\n\n\nabcc\n\n\n\n\n\n\n\n\n\n\n\n+ : 1 or more\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c+\n\n\n\nab\n\n\nabc\n\n\nabcc\n\n\n\n\n\n\n\n\n\n\n\n? : 0 or 1\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c?\n\n\n\n\nab\n\n\nabc\n\nabcc\n\n\n\n\n\n\n\n\n\n\n\n{3}: Exactly 3\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c{3}\n\n\n\nab\n\nabc\n\nabcc\n\nabcc\n\n\nabccc\n\nabcccc\n\n\n\n\n\n\n\n\n\n\n{3, }: Exactly 3 or more\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c{3,}\n\n\n\nabcc\n\nabcc\n\n\nabccc\n\n\nabcccc\n\n\nabcccccc\n\n\n\n\n\n\n\n\n\n\n\n{3, 5}: 3, 4 or 5\n\n\n\n\n\n\n\n\nRegular Expression\n\n\nTest Strings\n\n\n\n\n\n\n\n\n\n\n(ab)c{3, 5}\n\n\n\nabc\n\nabcc\n\n\nabccc\n\n\nabcccc\n\n\nabccccc\n\nabcccccc\n\n\n\n\n\n\n\n\n\n\n\nGreedy and Lazy\n\n\n\n\n\n\n\n\nString\n\n\nGreedy\n\n\nLazy\n\n\n\n\n\n\n\n\n\n\naabaaba\n\n\n\nRegex: \n^.b\n\nMatch: \naabaab\na\n\n\n\n\nRegex: \n^.*b?\n\nMatch: \naab\naaba\n\n\n\n\n\n\n\n\n\n\nReferences\n\n\n\n\nRegular Expressions cheat sheet", 
+            "title": "Quatifiers"
+        }, 
+        {
+            "location": "/quantifiers/#quantifiers", 
+            "text": "Quantifier  Meaning    *  O or more    +  1 or more    ?  O or 1    {3}  Exactly 3     {3,}  3 or more    {3,5}  3, 4 or 5", 
+            "title": "Quantifiers"
+        }, 
+        {
+            "location": "/quantifiers/#0-or-more", 
+            "text": "Regular Expression  Test Strings      (ab)c*   ab  abc  abcc", 
+            "title": "* : 0 or more"
+        }, 
+        {
+            "location": "/quantifiers/#1-or-more", 
+            "text": "Regular Expression  Test Strings      (ab)c+  \nab  abc  abcc", 
+            "title": "+ : 1 or more"
+        }, 
+        {
+            "location": "/quantifiers/#0-or-1", 
+            "text": "Regular Expression  Test Strings      (ab)c?   ab  abc \nabcc", 
+            "title": "? : 0 or 1"
+        }, 
+        {
+            "location": "/quantifiers/#3-exactly-3", 
+            "text": "Regular Expression  Test Strings      (ab)c{3}  \nab \nabc \nabcc \nabcc  abccc \nabcccc", 
+            "title": "{3}: Exactly 3"
+        }, 
+        {
+            "location": "/quantifiers/#3-exactly-3-or-more", 
+            "text": "Regular Expression  Test Strings      (ab)c{3,}  \nabcc \nabcc  abccc  abcccc  abcccccc", 
+            "title": "{3, }: Exactly 3 or more"
+        }, 
+        {
+            "location": "/quantifiers/#3-5-3-4-or-5", 
+            "text": "Regular Expression  Test Strings      (ab)c{3, 5}  \nabc \nabcc  abccc  abcccc  abccccc \nabcccccc", 
+            "title": "{3, 5}: 3, 4 or 5"
+        }, 
+        {
+            "location": "/quantifiers/#greedy-and-lazy", 
+            "text": "String  Greedy  Lazy      aabaaba  \nRegex:  ^.b \nMatch:  aabaab a  \nRegex:  ^.*b? \nMatch:  aab aaba", 
+            "title": "Greedy and Lazy"
+        }, 
+        {
+            "location": "/quantifiers/#references", 
+            "text": "Regular Expressions cheat sheet", 
+            "title": "References"
+        }
+    ]
+}
